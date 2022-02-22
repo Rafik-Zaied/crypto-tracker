@@ -2,9 +2,19 @@ import axios from "axios";
 import React from "react";
 import { Line } from "react-chartjs-2";
 import { Context } from "../Context";
-import { Chart as ChartJS } from "chart.js/auto";
-import { Chart } from "react-chartjs-2";
 import SelectButton from "./SelectButton";
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend,
+} from "chart.js";
+
+ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
 
 export default function CoinChart({ coin }) {
   const [chartData, setChartData] = React.useState();
