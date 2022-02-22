@@ -14,7 +14,7 @@ export default function TableRow({ coin }) {
 
   React.useEffect(() => {
     checkPresence(watchlist, coin.id) ? setIsFavorited(true) : setIsFavorited(false);
-  }, [watchlist]);
+  }, [watchlist, coin.id]);
 
   function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");

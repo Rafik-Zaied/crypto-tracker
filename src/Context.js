@@ -18,6 +18,7 @@ function ContextProvider(props) {
     if (storedWatchlist) {
       setWatchlist(storedWatchlist);
     } else setWatchlist([]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   React.useEffect(() => {

@@ -36,7 +36,7 @@ export default function CoinChart({ coin }) {
         .then((response) => {
           setChartData(response.data.prices);
         });
-  }, [days]);
+  }, [days, coin, currency]);
 
   return (
     <div>
