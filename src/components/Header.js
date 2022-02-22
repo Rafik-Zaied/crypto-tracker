@@ -20,7 +20,7 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <Link to="/" className={styles.link}>
-        <h3>Coin Tracker</h3>
+        <h3>Crypto Tracker</h3>
       </Link>
       <div className={styles.col}>
         <Link to="/watchlist" className={styles.link}>
