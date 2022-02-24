@@ -27,7 +27,7 @@ export default function Homepage() {
         setNetworkError(false);
       })
       .catch((error) => setNetworkError(true));
-  }, [currency]);
+  }, [currency, setNetworkError]);
 
   //display the table cointaining the fetched coins when the data fetch it's over, if an error occous another message is displayed.
   function display() {
