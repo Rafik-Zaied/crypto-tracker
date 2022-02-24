@@ -8,11 +8,13 @@ export default function Header() {
 
   const { setCurrency, watchlist } = React.useContext(Context);
 
+  //sets the currency to the value of the currency selected
   function handleChange(event) {
     setSelectedCurrency(event.target.value);
     setCurrency(event.target.value);
   }
 
+  //renders an empty or a full star icon basedd on the presence of coins in the watchlist
   function starIcon() {
     return watchlist.length ? <i className="star fa-solid fa-star"></i> : <i className="star fa-regular fa-star"></i>;
   }

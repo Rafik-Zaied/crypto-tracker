@@ -11,6 +11,8 @@ export default function Watchlist() {
   const [coinList, setCoinList] = React.useState([]);
   const [watchlistIsEmpty, setWatchlistIsEmpty] = React.useState(false);
 
+  //if the watchlist contain coins, we fetch the data of those coins, if the watchlist is empty we set
+  //the watchlistEmpty to true, in order to display a different message if there's no coins
   React.useEffect(() => {
     if (watchlist.length) {
       setWatchlistIsEmpty(false);
@@ -27,7 +29,6 @@ export default function Watchlist() {
       setWatchlistIsEmpty(true);
     }
   }, [currency, watchlist]);
-  console.log(coinList);
 
   function display() {
     if (loading) {
@@ -37,6 +38,8 @@ export default function Watchlist() {
     } else {
       return (
         <>
+          {/*we pass the fetched coin to the table component, the userINput props is set to an empty string
+           so all the coins are displayed*/}
           <h2>Your favorite coins</h2>
           <Table coinList={coinList} userInput={""} numberOfCoins={numberOfCoins} />
           {watchlist.length > 10 && <LoadMoreButton />}

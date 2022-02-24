@@ -11,7 +11,8 @@ export default function TableRow({ coin }) {
   function checkPresence(arr, val) {
     return arr.some((arrVal) => val === arrVal);
   }
-
+  //checks if the coin is present inside the watchlist, displays the empty or filled coin based on the result of the
+  //checkPresence function
   React.useEffect(() => {
     checkPresence(watchlist, coin.id) ? setIsFavorited(true) : setIsFavorited(false);
   }, [watchlist, coin.id]);
@@ -20,6 +21,8 @@ export default function TableRow({ coin }) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   }
 
+  //switches the isFavorite state, used to display the star icon based one the presence inside the watchlist
+  //adds or removes the coin from the watchlist based on the current state
   function handleStarIconClick() {
     if (isFavorited) {
       setIsFavorited(false);
