@@ -1,6 +1,6 @@
 # crypto-tracker
 
-A webapp that allows the user to view the current values and informations of most cryptocurrencies. The user can add he's favorite coins to a watchlist, that is saved on the local storage.
+A webapp that allows the user to view the current values and informations of most cryptocurrencies. The user can add their favorite coins to a watchlist that is saved on the local storage.
 
 ## Built With
 
